@@ -22,7 +22,7 @@ func connection() *sql.DB {
 	}
 
 	if db.Ping() != nil {
-		log.Println("DB Die")
+		log.Println("DB Die", db.Ping().Error())
 	}
 
 	return db
